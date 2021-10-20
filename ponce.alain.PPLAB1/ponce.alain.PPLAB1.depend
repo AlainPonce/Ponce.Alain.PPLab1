@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1634737447 source:c:\users\alain\desktop\ponce.alain.pplab1\fecha.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"fecha.h"
+
+1634738612 c:\users\alain\desktop\ponce.alain.pplab1\fecha.h
+
+1634738371 source:c:\users\alain\desktop\ponce.alain.pplab1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"motos.h"
+	"tipos.h"
+	"colores.h"
+	"servicios.h"
+	"trabajos.h"
+
+1634736958 c:\users\alain\desktop\ponce.alain.pplab1\motos.h
+	"tipos.h"
+	"colores.h"
+
+1634735646 c:\users\alain\desktop\ponce.alain.pplab1\tipos.h
+
+1634735483 c:\users\alain\desktop\ponce.alain.pplab1\colores.h
+
+1634735812 c:\users\alain\desktop\ponce.alain.pplab1\servicios.h
+
+1634736957 c:\users\alain\desktop\ponce.alain.pplab1\trabajos.h
+	"fecha.h"
+
+1634737883 source:c:\users\alain\desktop\ponce.alain.pplab1\motos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"motos.h"
+	"tipos.h"
+	"colores.h"
+
+1634737895 source:c:\users\alain\desktop\ponce.alain.pplab1\servicios.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"servicios.h"
+
+1634737430 source:c:\users\alain\desktop\ponce.alain.pplab1\tipos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1634738501 source:c:\users\alain\desktop\ponce.alain.pplab1\trabajos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"motos.h"
+	"tipos.h"
+	"colores.h"
+	"servicios.h"
+	"trabajos.h"
+

@@ -1,6 +1,7 @@
 #ifndef TRABAJOS_H_INCLUDED
 #define TRABAJOS_H_INCLUDED
 #include "fecha.h"
+#include "servicios.h"
 typedef struct
 {
     int id;

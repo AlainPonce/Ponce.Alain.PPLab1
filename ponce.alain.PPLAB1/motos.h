@@ -81,7 +81,7 @@ void listarMoto(eMoto unaMoto, int tam, eTipo tipos[], eColor colores[]);
  *
  */
 int modificarMoto(eMoto lista[], int tam, int pIdMoto, eTipo tipos[], eColor colores[], int tamCol);
-/** \brief Funcion para buscar un cliente ingresando un codigo
+/** \brief Funcion para buscar un cliente ingresando un ID
  *
  * \param lista[] eMoto array de motos
  * \param tam int tamanio del array
@@ -90,7 +90,7 @@ int modificarMoto(eMoto lista[], int tam, int pIdMoto, eTipo tipos[], eColor col
  *
  */
 
-int buscarMotoPorCodigo(eMoto lista[], int tam, int id);
+int buscarMotoPorId(eMoto lista[], int tam, int id);
 /** \brief Da de baja un cliente del array de Motos
  *
  * \param lista[] eMoto array de motos
@@ -122,6 +122,8 @@ int ordenarMotoTipo(eMoto lista[],int tam, eTipo tipo[], int tamTip);
  *
  */
 int cargarDescripcionMoto(int id, eMoto lista[], int tam, char desc[]);
+
+
 
 /*-----------------------------------------------------------------------------------------------------------*/
 

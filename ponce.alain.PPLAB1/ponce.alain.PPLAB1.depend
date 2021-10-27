@@ -1,13 +1,59 @@
 # depslib dependency file v1.0
-1634737447 source:c:\users\alain\desktop\ponce.alain.pplab1\fecha.c
+1635342995 source:c:\users\alain\desktop\ponce.alain.pplab1\colores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"colores.h"
+
+1635338329 c:\users\alain\desktop\ponce.alain.pplab1\colores.h
+
+1635341991 source:c:\users\alain\desktop\ponce.alain.pplab1\data.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"fecha.h"
+	"data.h"
+	"motos.h"
+
+1635338336 c:\users\alain\desktop\ponce.alain.pplab1\fecha.h
+
+1635341809 c:\users\alain\desktop\ponce.alain.pplab1\data.h
+	"motos.h"
+	"trabajos.h"
+
+1635341889 c:\users\alain\desktop\ponce.alain.pplab1\motos.h
+	"tipos.h"
+	"colores.h"
+
+1635338349 c:\users\alain\desktop\ponce.alain.pplab1\tipos.h
+
+1635338353 c:\users\alain\desktop\ponce.alain.pplab1\trabajos.h
+	"fecha.h"
+	"servicios.h"
+
+1635338346 c:\users\alain\desktop\ponce.alain.pplab1\servicios.h
+
+1635338307 source:c:\users\alain\desktop\ponce.alain.pplab1\fecha.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"fecha.h"
 
-1634738612 c:\users\alain\desktop\ponce.alain.pplab1\fecha.h
+1635342935 source:c:\users\alain\desktop\ponce.alain.pplab1\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"motos.h"
+	"colores.h"
+	"informes.h"
+	"trabajos.h"
+	"servicios.h"
 
-1634738371 source:c:\users\alain\desktop\ponce.alain.pplab1\main.c
+1635341453 c:\users\alain\desktop\ponce.alain.pplab1\informes.h
+	"trabajos.h"
+	"servicios.h"
+
+1635341897 source:c:\users\alain\desktop\ponce.alain.pplab1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -17,21 +63,10 @@
 	"colores.h"
 	"servicios.h"
 	"trabajos.h"
+	"informes.h"
+	"data.h"
 
-1634736958 c:\users\alain\desktop\ponce.alain.pplab1\motos.h
-	"tipos.h"
-	"colores.h"
-
-1634735646 c:\users\alain\desktop\ponce.alain.pplab1\tipos.h
-
-1634735483 c:\users\alain\desktop\ponce.alain.pplab1\colores.h
-
-1634735812 c:\users\alain\desktop\ponce.alain.pplab1\servicios.h
-
-1634736957 c:\users\alain\desktop\ponce.alain.pplab1\trabajos.h
-	"fecha.h"
-
-1634737883 source:c:\users\alain\desktop\ponce.alain.pplab1\motos.c
+1635338315 source:c:\users\alain\desktop\ponce.alain.pplab1\motos.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -40,19 +75,19 @@
 	"tipos.h"
 	"colores.h"
 
-1634737895 source:c:\users\alain\desktop\ponce.alain.pplab1\servicios.c
+1635338318 source:c:\users\alain\desktop\ponce.alain.pplab1\servicios.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"servicios.h"
 
-1634737430 source:c:\users\alain\desktop\ponce.alain.pplab1\tipos.c
+1635338322 source:c:\users\alain\desktop\ponce.alain.pplab1\tipos.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"tipos.h"
 
-1634738501 source:c:\users\alain\desktop\ponce.alain.pplab1\trabajos.c
+1635338325 source:c:\users\alain\desktop\ponce.alain.pplab1\trabajos.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

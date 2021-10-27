@@ -7,8 +7,10 @@
 #include "colores.h"
 #include "servicios.h"
 #include "trabajos.h"
+#include "informes.h"
+#include "data.h"
 
-#define TAM 10
+#define TAM 20
 #define TAMTIP 4
 #define TAMCOL 5
 #define TAMSER 4
@@ -29,30 +31,35 @@ int main()
     eTrabajo tnomina[TAMTRA];
     inicializarTrabajos(tnomina, TAMTRA);
 
+    if(dataMotos(nomina, TAM, 8, &idMoto))
+    {
+        flagAlta=1;
+    }
+    dataTrabajos(tnomina, TAMTRA, 8, &idTrabajo);
+
     eTipo tipos[TAMTIP] =
     {
-        {1000, "Enduro      "},
-        {1001, "Chopera     "},
-        {1002, "Scooter     "},
-        {1003, "Vintage     "},
-
+        {1000, "Enduro"},
+        {1001, "Chopera"},
+        {1002, "Scooter"},
+        {1003, "Vintage"},
     };
 
     eColor colores[TAMCOL] =
     {
-        {10000, "Gris     "},
-        {10001, "Negro    "},
-        {10002, "Azul     "},
-        {10003, "Blanco   "},
-        {10004, "Rojo     "},
+        {10000, "Gris"},
+        {10001, "Negro"},
+        {10002, "Azul"},
+        {10003, "Blanco"},
+        {10004, "Rojo"},
     };
 
     eServicio servicios[TAMSER] =
     {
-        {20000, "Limpieza  ", 450},
-        {20001, "Ajuste    ", 300},
-        {20002, "Balanceo  ", 150},
-        {20003, "Cadena    ", 390},
+        {20000, "Limpieza", 450},
+        {20001, "Ajuste  ", 300},
+        {20002, "Balanceo", 150},
+        {20003, "Cadena  ", 390},
     };
 
     do
@@ -64,13 +71,11 @@ int main()
                 if(altaMotos(nomina, TAM, &idMoto, tipos, TAMTIP, colores, TAMCOL))
                 {
                     printf("Alta Exitosa!\n\n");
-                    flagAlta=1;
                 }
                 else
                 {
                     printf("Ha ocurrido un error en el sistema.\n\n");
                 }
-
 
                 break;
 
@@ -142,6 +147,18 @@ int main()
                 printf("\n");
                 break;
 
+            case 'X':
+                if(flagAlta == 1 && submenu(nomina, TAM, colores, TAMCOL, tipos, TAMTIP, tnomina, TAMTRA, servicios, TAMSER))
+                {
+
+                    printf("Cierre del SubMenu.\n\n");
+                }
+                else
+                {
+                   printf("\nNo se ha registrado ninguna Moto.\n\n");
+                }
+                break;
+
             case 'Z':
                 printf("\nConfirma salida? (s/n): ");
                 fflush(stdin);
@@ -153,7 +170,7 @@ int main()
                 break;
 
             default:
-            printf("Opcion Invalida!\n");
+            printf("\nOpcion Invalida!\n\n");
 
         }
         system("pause");
@@ -176,8 +193,8 @@ int menu()
     printf("  F. Listar Colores.\n");
     printf("  G. Listar Servicios.\n");
     printf("  H. Alta Trabajo.\n");
-    printf("  I. Listar Trabajos.\n");
-
+    printf("  I. Listar Trabajos.\n\n");
+    printf("  X. Abrir Sub-Menu de informes.\n\n");
     printf("  Z. Salir.\n\n");
 
     printf("Ingrese opcion: ");

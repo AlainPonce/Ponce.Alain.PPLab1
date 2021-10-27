@@ -124,7 +124,7 @@ int listarMotos(eMoto lista[], int tam, eTipo tipos[], eColor colores[])
     int todoOk =0;
 
     printf("             ***Listado de Motos***\n\n");
-    printf("ID     MARCA   TIPO        COLOR    CILINDRADA    PUNTAJE\n");
+    printf("ID     MARCA   TIPO     COLOR   CILINDRADA    PUNTAJE\n");
 
     for(int i=0; i<tam; i++)
     {
@@ -150,7 +150,7 @@ void listarMoto(eMoto unaMoto, int tam, eTipo tipos[], eColor colores[])
 
     if(cargarDescripcionTipo(unaMoto.idTipo, tipos, tam, descripcionTipo) && cargarDescripcionColor(unaMoto.idColor, colores, tam, descripcionColor))
     {
-        printf("%d  %10s  %s%s%d            %d"
+        printf("%d  %10s  %s\t%s\t%d\t\t%d"
         , unaMoto.id
         , unaMoto.marca
         , descripcionTipo
@@ -176,7 +176,7 @@ int modificarMoto(eMoto lista[], int tam, int pIdMoto, eTipo tipos[], eColor col
 
     printf("\n");
 
-    indice = buscarMotoPorCodigo(lista, tam, pIdMoto);
+    indice = buscarMotoPorId(lista, tam, pIdMoto);
     if(lista != NULL && tam>0 && pIdMoto !=0 && tipos != NULL && colores != NULL && tamCol > 0)
     {
         if(indice == -1)
@@ -244,19 +244,6 @@ int modificarMoto(eMoto lista[], int tam, int pIdMoto, eTipo tipos[], eColor col
     }
     return todoOk;
 }
-int buscarMotoPorCodigo(eMoto lista[], int tam, int id)
-{
-    int indice = -1;
-    for(int i=0; i<tam; i++)
-    {
-        if(lista[i].id == id && lista[i].isEmpty == 0)
-        {
-            indice=i;
-            break;
-        }
-    }
-    return indice;
-}
 int bajaMoto(eMoto lista[], int tam, int id, eTipo tipos[], eColor colores[])
 {
     int todoOk=0;
@@ -272,7 +259,7 @@ int bajaMoto(eMoto lista[], int tam, int id, eTipo tipos[], eColor colores[])
 
     printf("\n");
 
-    indice = buscarMotoPorCodigo(lista, tam, id);
+    indice = buscarMotoPorId(lista, tam, id);
     if(lista != NULL && tam > 0 && id > 0 && tipos != NULL && colores != NULL)
     {
         if(indice == -1)
@@ -342,6 +329,19 @@ int cargarDescripcionMoto(int id, eMoto lista[], int tam, char desc[])
        }
     }
     return todoOk;
+}
+int buscarMotoPorId(eMoto lista[], int tam, int id)
+{
+    int indice = -1;
+    for(int i=0; i<tam; i++)
+    {
+        if(lista[i].id == id && lista[i].isEmpty == 0)
+        {
+            indice=i;
+            break;
+        }
+    }
+    return indice;
 }
 int validarNombre(char cadena[])
 {

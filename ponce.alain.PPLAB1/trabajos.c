@@ -60,17 +60,18 @@ int altaTrabajo(eTrabajo trabajos[], eMoto lista[], eTipo tipos[], eColor colore
             listarMotos(lista,tam, tipos, colores);
             printf("\nIngrese ID: ");
             scanf("%d", &id);
-            while(buscarMotoPorCodigo(lista, tam, id) == -1)
+            while(buscarMotoPorId(lista, tam, id) == -1)
             {
                 printf("Error. Ingrese ID correctamente: ");
                 scanf("%d", &id);
             }
             printf("\n");
+
             nuevoTrabajo.idMoto = id;
 
             printf("             ***Moto elegida***\n");
-            printf("ID    MARCA    TIPO       COLOR     CILINDRADA    PUNTAJE\n");
-            listarMoto(lista[indice], tam, tipos, colores);
+            printf("ID     MARCA   TIPO     COLOR   CILINDRADA    PUNTAJE\n");
+            listarMoto(lista[id-1], tam, tipos, colores);
 
             printf("\n");
 
@@ -125,7 +126,7 @@ int mostrarTrabajos(eTrabajo trabajos[], int tamTra, eTipo tipos[], int tamTip, 
     int todoOk =0;
     system("cls");
     printf("         ***Listado de Trabajos***\n\n");
-    printf("CODIGO  MOTO     SERVICIO    FECHA DE ALTA\n");
+    printf("CODIGO  MOTO     SERVICIO       FECHA DE ALTA\n");
 
     for(int i=0; i<tamTra; i++)
     {
@@ -151,7 +152,7 @@ void mostrarTrabajo(eTrabajo unTrabajo, int tamTra, eTipo tipos[], int tamTip, e
 
     if(cargarDescripcionServicio(unTrabajo.idServicio, servicios, tamSer, descripcionServicio) && cargarDescripcionMoto(unTrabajo.idMoto, lista, tam, descripcionMoto))
     {
-       printf("%d   %10s   %s  %d/%d/%d"
+       printf("%d   %10s   %s \t%d/%d/%d"
        , unTrabajo.id
        , descripcionMoto
        , descripcionServicio
